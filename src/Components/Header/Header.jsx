@@ -19,9 +19,9 @@ const Header = () => {
             {/* info Header */}
             <div className='bg-[#ecdfdf] px-4 py-2 md:py-0 md:px-16 flex justify-between items-center text-sm text-slate-600'>
                 <div className='md:flex items-center gap-5'>
-                    <p>+880 162 463 2302</p>
-                    <hr className='border border-slate-400 h-4 hidden md:block' />
-                    <p>tajkir.alam@gmail.com</p>
+                    <a href="tel:+8801624632302">+880 162 463 2302</a>
+                    <hr class="border border-slate-400 h-4 hidden md:block" />
+                    <a href="mailto:tajkir.alam@gmail.com">tajkir.alam@gmail.com</a>
                 </div>
                 <div className='flex items-center gap-2 md:gap-5'>
                     <div className="flex items-center gap-5">
