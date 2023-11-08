@@ -5,12 +5,12 @@ import { Link, NavLink } from 'react-router-dom';
 const Header = () => {
     const navItems = (
         <>
-            <li className='bg-transparent'><NavLink to={'/'} className='bg-transparent'>Home</NavLink></li>
-            <li className='bg-transparent'><NavLink to={'/about'} className='bg-transparent'>About</NavLink></li>
-            <li className='bg-transparent'><NavLink to={'/tours'} className='bg-transparent'>Tours</NavLink></li>
-            <li className='bg-transparent'><NavLink to={'/blog'} className='bg-transparent'>Blog</NavLink></li>
-            <li className='bg-transparent'><NavLink to={'/pages'} className='bg-transparent'>Pages</NavLink></li>
-            <li className='bg-transparent'><NavLink to={'/contact'} className='bg-transparent'>Contact</NavLink></li>
+            <li className='hover:bg-transparent'><NavLink to={'/'} className='hover:bg-transparent hover:text-yellow-500'>Home</NavLink></li>
+            <li className='hover:bg-transparent'><NavLink to={'/about'} className='hover:bg-transparent hover:text-yellow-500'>About</NavLink></li>
+            <li className='hover:bg-transparent'><NavLink to={'/tours'} className='hover:bg-transparent hover:text-yellow-500'>Tours</NavLink></li>
+            <li className='hover:bg-transparent'><NavLink to={'/blog'} className='hover:bg-transparent hover:text-yellow-500'>Blog</NavLink></li>
+            <li className='hover:bg-transparent'><NavLink to={'/pages'} className='hover:bg-transparent hover:text-yellow-500'>Pages</NavLink></li>
+            <li className='hover:bg-transparent'><NavLink to={'/contact'} className='hover:bg-transparent hover:text-yellow-500'>Contact</NavLink></li>
         </>
     )
 
@@ -40,22 +40,22 @@ const Header = () => {
             </div>
 
             {/* Navigation Header */}
-            <div className="navbar bg-white px-4 md:px-16 flex">
-                <div className="md:mr-5">
+            <div className="navbar bg-white px-4 md:px-16 justify-between">
+                <div>
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52">
+                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52 bg-base-100 text-slate-800 font-medium tracking-wider duration-300">
                             {navItems}
                         </ul>
                     </div>
-                    <Link to={'/'} className="btn btn-ghost normal-case text-xl">
+                    <Link to={'/'} className="btn px-0 bg-transparent hover:bg-transparent border-0">
                         <img src="./logo.jpg" alt="logo" className='h-full' />
                     </Link>
                 </div>
                 <div className="navbar-start hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
+                    <ul className="menu menu-horizontal px-1 text-slate-800 font-medium tracking-wider duration-300">
                         {navItems}
                     </ul>
                 </div>
@@ -64,13 +64,13 @@ const Header = () => {
                         <FaSearch />
                     </button>
                     <FaRegUser />
-                    <Link to={'login'} className='border-slate-400 px-1 hover:border-b duration-300 ease-in-out'>
+                    <NavLink to={'login'} className='border-slate-400 px-1 hover:border-b hover:text-yellow-500 duration-300 ease-in-out'>
                         Login
-                    </Link>
+                    </NavLink>
                     /
-                    <Link to={'login'} className='border-slate-400 px-1 hover:border-b duration-300 ease-in-out'>
+                    <NavLink to={'login'} className='border-slate-400 px-1 hover:border-b hover:text-yellow-500 duration-300 ease-in-out'>
                         Signup
-                    </Link>
+                    </NavLink>
                 </div>
             </div>
         </div>

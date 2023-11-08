@@ -4,6 +4,6 @@
 
 
 .active {
-    color: yellow;
-    background: none;
+    color: rgb(235, 68, 7)             !important;
+    background: transparent     !important;
 }
