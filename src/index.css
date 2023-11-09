@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 
+@layer components {
+    .container {
+        @apply px-2 lg:w-4/5 md:mx-auto
+    }
+}
+
 .active {
     color: rgb(235, 68, 7)             !important;
     background: transparent     !important;
