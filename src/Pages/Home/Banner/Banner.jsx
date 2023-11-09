@@ -23,18 +23,18 @@ const Banner = () => {
     ]
 
     return (
-        <div className='relative bg-blue-900'>
-            <div className='container py-12 grid md:grid-cols-2 items-center'>
-                <div className='text-white'>
-                    <h4 className='text-yellow-300 text-4xl font-Handlee'>
+        <div className='relative bg-blue-900 pb-10 md:pb-0'>
+            <div className='container grid md:grid-cols-2 items-center'>
+                <div className='text-white my-5 md:mb-14'>
+                    <h4 className='text-yellow-300 text-3xl md:text-4xl font-Handlee'>
                         Explore The
                     </h4>
-                    <h3 className='mt-5 mb-3 text-7xl'>
+                    <h3 className='mt-5 mb-3 text-5xl md:text-7xl'>
                         Travel & <br /> Adventures
                     </h3>
                     <p className='text-sm'>Find awesome hotel, tour, car and activities in London</p>
                 </div>
-                <div className='flex gap-5 lg:mt-12'>
+                <div className='hidden gap-5 mt-12 md:flex'>
                     <div>
                         <img src="./images/image1.jpg" alt="" className='h-[325px] w-[600px]' />
                     </div>
@@ -45,11 +45,11 @@ const Banner = () => {
             </div>
 
             {/* Search Destination */}
-            <form onSubmit={handleSubmit(onSubmit)} className='absolute -bottom-24 md:bottom-8 left-5 lg:left-36 p-5 bg-white rounded-xl grid grid-cols-2 lg:grid-cols-5 gap-3 items-center'>
+            <form onSubmit={handleSubmit(onSubmit)} className='md:absolute md:bottom-8 mx-5 md:mx-0 left-5 lg:left-36 p-5 bg-white rounded-xl grid grid-cols-2 lg:grid-cols-5 gap-3 items-center'>
                 <div>
                     <label className='font-Handlee block ml-1' htmlFor="destination">Destination</label>
                     <Select
-                        placeholder={`Where to go`}
+                        placeholder={`Desitnation`}
                         components={animatedComponents}
                         options={destinationOptions}
                     />

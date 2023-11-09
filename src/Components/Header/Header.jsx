@@ -18,7 +18,7 @@ const Header = () => {
         <div>
             {/* info Header */}
             <div className='bg-[#ecdfdf] px-4 py-2 md:py-0 md:px-16 flex justify-between items-center text-sm text-slate-600'>
-                <div className='md:flex items-center gap-5'>
+                <div className='hidden md:flex items-center gap-5'>
                     <a href="tel:+8801624632302">+880 162 463 2302</a>
                     <hr class="border border-slate-400 h-4 hidden md:block" />
                     <a href="mailto:tajkir.alam@gmail.com">tajkir.alam@gmail.com</a>
