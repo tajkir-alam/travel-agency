@@ -5,7 +5,6 @@ import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
 import "react-datepicker/dist/react-datepicker.css";
 
-
 const Banner = () => {
     const [startDate, setStartDate] = useState(new Date());
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
@@ -25,7 +24,7 @@ const Banner = () => {
 
     return (
         <div className='relative bg-blue-900'>
-            <div className='container grid md:grid-cols-2 items-center'>
+            <div className='container py-12 grid md:grid-cols-2 items-center'>
                 <div className='text-white'>
                     <h4 className='text-yellow-300 text-4xl font-Handlee'>
                         Explore The
@@ -35,7 +34,7 @@ const Banner = () => {
                     </h3>
                     <p className='text-sm'>Find awesome hotel, tour, car and activities in London</p>
                 </div>
-                <div className='flex gap-5 lg:mt-24'>
+                <div className='flex gap-5 lg:mt-12'>
                     <div>
                         <img src="./images/image1.jpg" alt="" className='h-[325px] w-[600px]' />
                     </div>
@@ -50,20 +49,16 @@ const Banner = () => {
                 <div>
                     <label className='font-Handlee block ml-1' htmlFor="destination">Destination</label>
                     <Select
+                        placeholder={`Where to go`}
                         components={animatedComponents}
                         options={destinationOptions}
+                        
                     />
                 </div>
                 <div>
-                    <label className='font-Handlee block ml-1' htmlFor="destination">Tyoe</label>
+                    <label className='font-Handlee block ml-1' htmlFor="destination">Type</label>
                     <Select
-                        components={animatedComponents}
-                        options={destinationOptions}
-                    />
-                </div>
-                <div>
-                    <label className='font-Handlee block ml-1' htmlFor="destination">Activity</label>
-                    <Select
+                        placeholder={`Activity`}
                         components={animatedComponents}
                         options={destinationOptions}
                     />
@@ -71,13 +66,22 @@ const Banner = () => {
                 <div>
                     <label className='font-Handlee block ml-1' htmlFor="destination">When</label>
                     <ReactDatePicker
-                        selected={startDate}
                         onChange={(date) => setStartDate(date)}
                         portalId="root-portal"
+                        placeholderText={`Date`}
+                        className='pl-2 py-[6px] border border-black/20 rounded-md focus:outline-none'
                     />
                 </div>
                 <div>
-                    <button type='submit' className='btn bg-yellow-300 hover:bg-yellow-300/80 hover:border-transparent capitalize tracking-widest px-8 text-lg'>
+                    <label className='font-Handlee block ml-1' htmlFor="destination">Activity</label>
+                    <Select
+                        placeholder={`Guests`}
+                        components={animatedComponents}
+                        options={destinationOptions}
+                    />
+                </div>
+                <div className='flex justify-center mt-4 col-span-2 md:col-span-1'>
+                    <button type='submit' className='btn bg-yellow-300 w-full hover:bg-yellow-300/80 hover:border-transparent capitalize tracking-widest px-8 text-lg'>
                         Search
                     </button>
                 </div>
