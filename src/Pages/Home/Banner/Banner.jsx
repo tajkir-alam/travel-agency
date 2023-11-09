@@ -52,7 +52,6 @@ const Banner = () => {
                         placeholder={`Where to go`}
                         components={animatedComponents}
                         options={destinationOptions}
-                        
                     />
                 </div>
                 <div>
